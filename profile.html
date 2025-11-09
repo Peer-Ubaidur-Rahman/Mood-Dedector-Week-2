@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - CodeSapiens Mood Detector</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="team-name">🧠 CodeSapiens</div>
+            <nav>
+                <a href="index.html" id="nav-home">Home</a>
+                <a href="about.html" id="nav-about">About Us</a>
+                <a href="profile.html" id="nav-profile" class="active">Profile</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="profile-hero">
+            <h1>👤 Your Profile</h1>
+            <p>Manage your CodeSapiens account and personal information</p>
+        </div>
+
+        <div class="profile-grid">
+            <div class="profile-card">
+                <div class="card-header">
+                    <h2>Account Information</h2>
+                </div>
+
+                <div class="profile-section">
+                    <div class="profile-item">
+                        <label>Full Name</label>
+                        <div class="profile-value" id="user-name">Loading...</div>
+                    </div>
+
+                    <div class="profile-item">
+                        <label>Email Address</label>
+                        <div class="profile-value" id="user-email">Loading...</div>
+                    </div>
+
+                    <div class="profile-item">
+                        <label>Member Since</label>
+                        <div class="profile-value" id="user-created">Loading...</div>
+                    </div>
+                </div>
+
+                <div class="profile-actions">
+                    <a href="index.html" class="btn btn-primary">🎭 Go to Mood Detector</a>
+                    <button onclick="logout()" class="btn btn-secondary">🚪 Logout</button>
+                </div>
+            </div>
+
+            <div class="profile-card info-card">
+                <div class="card-header">
+                    <h2>About Your Account</h2>
+                </div>
+
+                <div class="info-section">
+                    <h3>What is CodeSapiens?</h3>
+                    <p>CodeSapiens is an AI-powered mood detector that uses real-time face recognition technology to analyze your emotions. All processing happens securely in your browser.</p>
+                    
+                    <h3>Your Data</h3>
+                    <p>Your mood records and personal information are stored securely and can only be accessed by you. You maintain full control over your data.</p>
+                    
+                    <h3>Features</h3>
+                    <ul class="feature-list">
+                        <li>Real-time emotion detection</li>
+                        <li>Mood history tracking</li>
+                        <li>Session analytics</li>
+                        <li>Privacy-first approach</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <span class="footer-text">&copy; 2025 CodeSapiens | All rights reserved</span>
+            <div class="social-links">
+                <a href="https://instagram.com" target="_blank">📷</a>
+                <a href="https://linkedin.com" target="_blank">💼</a>
+                <a href="https://youtube.com" target="_blank">🎥</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            loadUserProfile();
+        });
+
+        function loadUserProfile() {
+            const token = localStorage.getItem('token');
+            const user = localStorage.getItem('user');
+
+            if (!token || !user) {
+                window.location.href = 'login.html';
+                return;
+            }
+
+            const userData = JSON.parse(user);
+            
+            document.getElementById('user-name').textContent = userData.fullname || 'N/A';
+            document.getElementById('user-email').textContent = userData.email || 'N/A';
+            
+            const today = new Date();
+            const dateStr = today.toLocaleDateString('en-US', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            });
+            document.getElementById('user-created').textContent = dateStr;
+        }
+    </script>
+</body>
+</html>

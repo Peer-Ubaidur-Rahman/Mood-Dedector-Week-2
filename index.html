@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeSapiens Mood Detector | Home</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="team-name">🚀 TECH TITANS</div>
+            <nav>
+                <a href="index.html" id="nav-home">Home</a>
+                <a href="about.html" id="nav-about">About Us</a>
+                <a href="signup.html" id="nav-signup">Sign Up</a>
+                <a href="login.html" id="nav-login">Log In</a>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="hero">
+            <h1>CODESAPIENS MOOD DETECTOR</h1>
+            <p>AI-Powered Real-Time Face Recognition Technology</p>
+        </div>
+
+        <div class="main-grid">
+            <div class="video-section">
+                <h2>📹 Live Camera Feed</h2>
+                <video id="video" autoplay muted></video>
+                <div class="controls">
+                    <button id="start-btn" class="btn btn-primary">Start Camera</button>
+                    <button id="stop-btn" class="btn btn-secondary" style="display: none;">Stop Camera</button>
+                </div>
+                <div id="status" class="status">Ready to start</div>
+            </div>
+
+            <div class="mood-section">
+                <h2>🎭 Mood Detection</h2>
+
+                <div class="current-emotion">
+                    <h3>Current Emotion</h3>
+                    <div class="emotion-display" id="emotion-emoji"></div>
+                    <div class="emotion-name" id="emotion-name">--</div>
+                    <div class="confidence" id="confidence">Confidence: 0%</div>
+                </div>
+
+                <div class="all-emotions">
+                    <h3>All Emotions</h3>
+
+                    <div class="emotion-item">
+                        <div class="emotion-label">😊 Happy</div>
+                        <div class="emotion-bar-container">
+                            <div class="emotion-bar" id="happy-bar"></div>
+                        </div>
+                        <div class="emotion-percent" id="happy-percent">0%</div>
+                    </div>
+
+                    <div class="emotion-item">
+                        <div class="emotion-label">😢 Sad</div>
+                        <div class="emotion-bar-container">
+                            <div class="emotion-bar" id="sad-bar"></div>
+                        </div>
+                        <div class="emotion-percent" id="sad-percent">0%</div>
+                    </div>
+
+                    <div class="emotion-item">
+                        <div class="emotion-label">😠 Angry</div>
+                        <div class="emotion-bar-container">
+                            <div class="emotion-bar" id="angry-bar"></div>
+                        </div>
+                        <div class="emotion-percent" id="angry-percent">0%</div>
+                    </div>
+
+                    <div class="emotion-item">
+                        <div class="emotion-label">😮 Surprised</div>
+                        <div class="emotion-bar-container">
+                            <div class="emotion-bar" id="surprised-bar"></div>
+                        </div>
+                        <div class="emotion-percent" id="surprised-percent">0%</div>
+                    </div>
+
+                    <div class="emotion-item">
+                        <div class="emotion-label">😨 Fearful</div>
+                        <div class="emotion-bar-container">
+                            <div class="emotion-bar" id="fearful-bar"></div>
+                        </div>
+                        <div class="emotion-percent" id="fearful-percent">0%</div>
+                    </div>
+
+                    <div class="emotion-item">
+                        <div class="emotion-label">🤢 Disgusted</div>
+                        <div class="emotion-bar-container">
+                            <div class="emotion-bar" id="disgusted-bar"></div>
+                        </div>
+                        <div class="emotion-percent" id="disgusted-percent">0%</div>
+                    </div>
+
+                    <div class="emotion-item">
+                        <div class="emotion-label">😐 Neutral</div>
+                        <div class="emotion-bar-container">
+                            <div class="emotion-bar" id="neutral-bar"></div>
+                        </div>
+                        <div class="emotion-percent" id="neutral-percent">0%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-text">© 2025 CodeSapiens by Tech Titans. All rights reserved.</div>
+            <div class="social-links">
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">📷</a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn">💼</a>
+                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube">📺</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api/dist/face-api.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>

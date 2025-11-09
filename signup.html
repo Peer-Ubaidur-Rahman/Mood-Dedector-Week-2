@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeSapiens Mood Detector | Sign Up</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="team-name">🚀 TECH TITANS</div>
+            <nav>
+                <a href="index.html" id="nav-home">Home</a>
+                <a href="about.html" id="nav-about">About Us</a>
+                <a href="signup.html" id="nav-signup">Sign Up</a>
+                <a href="login.html" id="nav-login">Log In</a>
+            </nav>
+        </div>
+    </header>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h1>Create Account</h1>
+                <p>Join CodeSapiens to start detecting emotions</p>
+            </div>
+
+            <form class="auth-form" id="signup-form">
+                <div class="form-group">
+                    <label for="fullname" class="form-label">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Create a password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password" class="form-label">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" class="form-control" placeholder="Confirm your password" required>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the Terms of Service and Privacy Policy</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full">Create Account</button>
+            </form>
+
+            <div class="auth-links">
+                <p>Already have an account? <a href="login.html">Log In</a></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-text">© 2025 CodeSapiens by Tech Titans. All rights reserved.</div>
+            <div class="social-links">
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">📷</a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn">💼</a>
+                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube">📺</a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
